@@ -27,7 +27,7 @@ var config = {
   httpsPrivateKey: "", // HTTPS private key path, only require when useHttps is true
   httpsCertificate: "", // HTTPS Certificate path, only require when useHttps is true
 
-  language: "en",
+  language: "nl",
   locale: "en-US",
   logLevel: ["INFO", "LOG", "WARN", "ERROR"], // Add "DEBUG" for even more logging
   timeFormat: 24,
@@ -50,63 +50,90 @@ var config = {
       module: "clock",
       position: "top_left",
     },
-    {
-      module: "calendar",
-      header: "US Holidays",
-      position: "top_left",
-      config: {
-        calendars: [
-          {
-            symbol: "calendar-check",
-            url:
-              "webcal://www.calendarlabs.com/ical-calendar/ics/76/US_Holidays.ics",
-          },
-        ],
-      },
-    },
+    // {
+    //   module: "calendar",
+    //   header: "US Holidays",
+    //   position: "top_left",
+    //   config: {
+    //     calendars: [
+    //       {
+    //         symbol: "calendar-check",
+    //         url:
+    //           "webcal://www.calendarlabs.com/ical-calendar/ics/76/US_Holidays.ics",
+    //       },
+    //     ],
+    //   },
+    // },
     {
       module: "compliments",
-      position: "lower_third",
-    },
-    {
-      module: "weather",
-      position: "top_right",
-      config: {
-        weatherProvider: "openweathermap",
-        type: "current",
-        location: "New York",
-        locationID: "5128581", //ID from http://bulk.openweathermap.org/sample/city.list.json.gz; unzip the gz file and find your city
-        apiKey: "YOUR_OPENWEATHER_API_KEY",
-      },
-    },
-    {
-      module: "weather",
-      position: "top_right",
-      header: "Weather Forecast",
-      config: {
-        weatherProvider: "openweathermap",
-        type: "forecast",
-        location: "New York",
-        locationID: "5128581", //ID from http://bulk.openweathermap.org/sample/city.list.json.gz; unzip the gz file and find your city
-        apiKey: "YOUR_OPENWEATHER_API_KEY",
-      },
-    },
-    {
-      module: "newsfeed",
       position: "bottom_bar",
+    },
+    // {
+    //   module: "weather",
+    //   position: "top_right",
+    //   config: {
+    //     weatherProvider: "openweathermap",
+    //     type: "current",
+    //     location: "New York",
+    //     locationID: "5128581", //ID from http://bulk.openweathermap.org/sample/city.list.json.gz; unzip the gz file and find your city
+    //     apiKey: "YOUR_OPENWEATHER_API_KEY",
+    //   },
+    // },
+    // {
+    //   module: "weather",
+    //   position: "top_right",
+    //   header: "Weather Forecast",
+    //   config: {
+    //     weatherProvider: "openweathermap",
+    //     type: "forecast",
+    //     location: "New York",
+    //     locationID: "5128581", //ID from http://bulk.openweathermap.org/sample/city.list.json.gz; unzip the gz file and find your city
+    //     apiKey: "YOUR_OPENWEATHER_API_KEY",
+    //   },
+    // },
+    {
+      module: "MMM-MyDutchWeather",
+      position: "top_left",
+      header: "Weersvoorspelligen",
       config: {
-        feeds: [
-          {
-            title: "New York Times",
-            url: "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
-          },
-        ],
-        showSourceTitle: true,
-        showPublishDate: true,
-        broadcastNewsFeeds: true,
-        broadcastNewsUpdates: true,
+        latitude: 51.55551, // Latitude of your city
+        longitude: 5.0913, // Longitude of your city
+        apiKey: "ee47e3b5d8", // API Key - Get for free at http://weerlive.nl/api/toegang/index.php
+        showIcons: true, // Display Icons or Text
+        showExtra: false, // Display additional weather information
+        maxWidth: "500px", // Max width wrapper
       },
     },
+    {
+      module: "bustimes",
+      position: "top_right",
+      header: "Bustijden",
+      config: {
+        timingPointCode: "73002000,73000210",
+        displaymode: "large",
+        showTownName: true,
+        showDelay: true,
+        showTransportTypeIcon: true,
+        showLiveIcon: true,
+        departs: 6,
+      },
+    },
+    // {
+    //   module: "newsfeed",
+    //   position: "bottom_bar",
+    //   config: {
+    //     feeds: [
+    //       {
+    //         title: "New York Times",
+    //         url: "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+    //       },
+    //     ],
+    //     showSourceTitle: true,
+    //     showPublishDate: true,
+    //     broadcastNewsFeeds: true,
+    //     broadcastNewsUpdates: true,
+    //   },
+    // },
   ],
 };
 
