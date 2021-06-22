@@ -100,7 +100,7 @@ var config = {
         longitude: 5.0913, // Longitude of your city
         apiKey: "ee47e3b5d8", // API Key - Get for free at http://weerlive.nl/api/toegang/index.php
         showIcons: true, // Display Icons or Text
-        showExtra: false, // Display additional weather information
+        showExtra: true, // Display additional weather information
         maxWidth: "500px", // Max width wrapper
       },
     },
