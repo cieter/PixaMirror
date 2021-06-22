@@ -14,7 +14,10 @@ You can download node.js from [here](https://nodejs.org/en/download/) for your r
 
 To get the application started, follow these steps:
 1. Clone this repository by typingte following in the terminal: `git clone https://github.com/cieter/PixaMirror`.
-2. Then type `cd PixaMirror`.
-3. Next run `npm install`.
-4. Then copy the config sample file to a normal config file by typing: `cp config/config.js.sample config/config.js`.
-5. At last you have to run `npm run start`.
+2. Then type `cd PixaMirror/modules`.
+3. The following command would be: `git clone https://github.com/htilburgs/MMM-MyDutchWeather.git`.
+4. This step, type: `cd MMM-MyDutchWeather`.
+5. Next run `npm install`.
+6. Run `cd ../`.
+7. Type: `git clone https://github.com/73cirdan/MMM-bustimes bustimes`.
+8. At last you have to run `npm run start`.
