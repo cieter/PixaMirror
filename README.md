@@ -20,4 +20,5 @@ To get the application started, follow these steps:
 5. Next run `npm install`.
 6. Run `cd ../`.
 7. Type: `git clone https://github.com/73cirdan/MMM-bustimes bustimes`.
-8. At last you have to run `npm run start`.
+8. Again run `npm install`.
+9. At last you have to run `npm run start`.
